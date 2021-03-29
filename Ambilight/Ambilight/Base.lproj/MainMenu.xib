@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="494" customClass="AmbilightAppDelegate">
+            <connections>
+                <outlet property="blue_adjust" destination="585" id="596"/>
+                <outlet property="border_adjust" destination="650" id="657"/>
+                <outlet property="bpmMenuItem" destination="tLH-00-Ico" id="DBy-jB-c9K"/>
+                <outlet property="brightness" destination="558" id="562"/>
+                <outlet property="captureMenuItem" destination="535" id="KnR-IA-YIn"/>
+                <outlet property="confettiMenuItem" destination="WR7-5Z-Pcx" id="sL9-uf-U4X"/>
+                <outlet property="fadeMenuItem" destination="620" id="622"/>
+                <outlet property="fade_adjust" destination="628" id="631"/>
+                <outlet property="frame_adjust" destination="642" id="656"/>
+                <outlet property="gradientMenuItem" destination="JH7-Z2-BUv" id="OCo-fy-Fv3"/>
+                <outlet property="green_adjust" destination="583" id="595"/>
+                <outlet property="juggleMenuItem" destination="3PB-6X-bRv" id="skl-tH-PqT"/>
+                <outlet property="manualMenuItem" destination="534" id="540"/>
+                <outlet property="rainbowMenuItem" destination="2ji-qV-iVp" id="nT3-ok-ui9"/>
+                <outlet property="red_adjust" destination="581" id="594"/>
+                <outlet property="sinelonMenuItem" destination="yGG-7m-swI" id="KrX-jg-O7s"/>
+                <outlet property="startupMenuItem" destination="551" id="553"/>
+                <outlet property="statusMenu" destination="533" id="538"/>
+                <outlet property="testOutput" destination="614" id="618"/>
+                <outlet property="timeOffset" destination="9Vc-fB-2Sf" id="ooE-mv-AGT"/>
+            </connections>
+        </customObject>
+        <customObject id="420" customClass="NSFontManager"/>
+        <menu title="Ambilight" id="533">
+            <items>
+                <menuItem title="Screen Average" id="535">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="startCapturing:" target="494" id="30R-Ft-sUn"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Fade" id="620">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="startFading:" target="494" id="623"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Pick Color" id="534">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="openColorPicker:" target="494" id="Sed-fK-VDW"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Rainbow" id="2ji-qV-iVp">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="startRainbow:" target="494" id="KCd-Vl-GuF"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Gradient" id="JH7-Z2-BUv">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="startGradient:" target="494" id="GfL-lR-Nwc"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Confetti" id="WR7-5Z-Pcx">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="startConfetti:" target="494" id="xqo-8R-dzk"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Sinelon" id="yGG-7m-swI">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="startSinelon:" target="494" id="FCc-d7-LwX"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Juggle" id="3PB-6X-bRv">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="startJuggle:" target="494" id="fSs-Mo-79K"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="BPM" id="tLH-00-Ico">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="startBPM:" target="494" id="XVr-uR-Fv4"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="548"/>
+                <menuItem title="Brightness" id="555">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <outlet property="view" destination="557" id="560"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Adjust" id="577">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Adjust" id="578">
+                        <items>
+                            <menuItem title="Color" id="579">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <outlet property="view" destination="580" id="593"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Border" id="652">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <outlet property="view" destination="647" id="653"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Frame" id="654">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <outlet property="view" destination="639" id="655"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Fade" id="630">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <outlet property="view" destination="627" id="632"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="TimeOffset" id="lII-Ph-i9X">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <outlet property="view" destination="cbe-zt-Sdj" id="VXf-1t-kDD"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="556"/>
+                <menuItem title="iPhone" id="607">
+                    <attributedString key="attributedTitle"/>
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <outlet property="view" destination="613" id="619"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="B36-AY-aMd"/>
+                <menuItem title="Launch on Startup" id="551">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="toggleLaunchAtStartup:" target="494" id="554"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="552"/>
+                <menuItem title="Quit" id="546">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="closeApp:" target="494" id="550"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="-188" y="39"/>
+        </menu>
+        <box autoresizesSubviews="NO" borderType="line" title="Brightness" id="557">
+            <rect key="frame" x="0.0" y="0.0" width="182" height="42"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <view key="contentView" id="Cz1-Pg-FCL">
+                <rect key="frame" x="3" y="3" width="176" height="24"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="558">
+                        <rect key="frame" x="9" y="3" width="163" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="1" tickMarkPosition="above" sliderType="linear" id="559"/>
+                        <connections>
+                            <action selector="setAmbilightValues:" target="494" id="781"/>
+                        </connections>
+                    </slider>
+                </subviews>
+            </view>
+            <point key="canvasLocation" x="116" y="-104"/>
+        </box>
+        <box autoresizesSubviews="NO" borderType="line" title="Time Offset" id="cbe-zt-Sdj">
+            <rect key="frame" x="0.0" y="0.0" width="201" height="42"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <view key="contentView" id="nCM-Y4-fHX">
+                <rect key="frame" x="3" y="3" width="195" height="24"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Vc-fB-2Sf">
+                        <rect key="frame" x="9" y="3" width="163" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="50" doubleValue="4" tickMarkPosition="above" sliderType="linear" id="9Ub-Ke-54F"/>
+                        <connections>
+                            <action selector="setAmbilightValues:" target="494" id="WBF-0S-XYJ"/>
+                        </connections>
+                    </slider>
+                </subviews>
+            </view>
+            <point key="canvasLocation" x="410.5" y="59"/>
+        </box>
+        <box autoresizesSubviews="NO" borderType="line" title="Box" id="564">
+            <rect key="frame" x="0.0" y="0.0" width="181" height="85"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <view key="contentView" id="MvC-Gv-3x5">
+                <rect key="frame" x="3" y="3" width="175" height="67"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <colorWell fixedFrame="YES" bordered="NO" translatesAutoresizingMaskIntoConstraints="NO" id="565">
+                        <rect key="frame" x="37" y="33" width="106" height="27"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </colorWell>
+                    <colorWell fixedFrame="YES" bordered="NO" translatesAutoresizingMaskIntoConstraints="NO" id="568">
+                        <rect key="frame" x="8" y="7" width="31" height="53"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </colorWell>
+                    <colorWell fixedFrame="YES" bordered="NO" translatesAutoresizingMaskIntoConstraints="NO" id="569">
+                        <rect key="frame" x="141" y="7" width="30" height="53"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </colorWell>
+                    <colorWell fixedFrame="YES" bordered="NO" translatesAutoresizingMaskIntoConstraints="NO" id="566">
+                        <rect key="frame" x="37" y="7" width="106" height="28"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </colorWell>
+                </subviews>
+            </view>
+            <point key="canvasLocation" x="401" y="-77"/>
+        </box>
+        <box autoresizesSubviews="NO" borderType="line" title="Color" id="580">
+            <rect key="frame" x="0.0" y="0.0" width="201" height="97"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <view key="contentView" id="LSe-XL-lUi">
+                <rect key="frame" x="3" y="3" width="195" height="79"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="581">
+                        <rect key="frame" x="54" y="55" width="129" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="1" tickMarkPosition="above" sliderType="linear" id="582"/>
+                        <connections>
+                            <action selector="setAmbilightValues:" target="494" id="775"/>
+                        </connections>
+                    </slider>
+                    <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="583">
+                        <rect key="frame" x="54" y="30" width="129" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="1" tickMarkPosition="above" sliderType="linear" id="584"/>
+                        <connections>
+                            <action selector="setAmbilightValues:" target="494" id="776"/>
+                        </connections>
+                    </slider>
+                    <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="585">
+                        <rect key="frame" x="54" y="5" width="129" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="1" tickMarkPosition="above" sliderType="linear" id="586"/>
+                        <connections>
+                            <action selector="setAmbilightValues:" target="494" id="777"/>
+                        </connections>
+                    </slider>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="587">
+                        <rect key="frame" x="8" y="57" width="32" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Red:" id="588">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="589">
+                        <rect key="frame" x="8" y="32" width="46" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Green:" id="590">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="591">
+                        <rect key="frame" x="8" y="7" width="35" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Blue:" id="592">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+            </view>
+            <point key="canvasLocation" x="117" y="119"/>
+        </box>
+        <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" id="609">
+            <rect key="frame" x="0.0" y="0.0" width="195" height="22"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" enabled="NO" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="610">
+                <font key="font" metaFont="system"/>
+                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+            </textFieldCell>
+            <point key="canvasLocation" x="116.5" y="8"/>
+        </textField>
+        <box autoresizesSubviews="NO" borderType="bezel" title="Send from Remote:" id="613">
+            <rect key="frame" x="0.0" y="0.0" width="183" height="48"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+            <view key="contentView" id="LxN-9i-Sp7">
+                <rect key="frame" x="3" y="3" width="177" height="30"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="614">
+                        <rect key="frame" x="8" y="4" width="161" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" drawsBackground="YES" id="615">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+            </view>
+        </box>
+        <box autoresizesSubviews="NO" borderType="line" title="FadeSpeed" id="627">
+            <rect key="frame" x="0.0" y="0.0" width="201" height="42"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <view key="contentView" id="tnR-yi-bVv">
+                <rect key="frame" x="3" y="3" width="195" height="24"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="628">
+                        <rect key="frame" x="9" y="3" width="179" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="1.5" doubleValue="0.35649475870253161" tickMarkPosition="above" sliderType="linear" id="629"/>
+                        <connections>
+                            <action selector="setAmbilightValues:" target="494" id="778"/>
+                        </connections>
+                    </slider>
+                </subviews>
+            </view>
+            <point key="canvasLocation" x="411" y="161"/>
+        </box>
+        <box autoresizesSubviews="NO" borderType="line" title="Frame" id="639">
+            <rect key="frame" x="0.0" y="0.0" width="201" height="42"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <view key="contentView" id="iU9-NS-K3O">
+                <rect key="frame" x="3" y="3" width="195" height="24"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="642">
+                        <rect key="frame" x="8" y="3" width="180" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="0.001" maxValue="0.10000000000000001" doubleValue="0.0040000000000000001" tickMarkPosition="above" sliderType="linear" id="643"/>
+                        <connections>
+                            <action selector="setAmbilightValues:" target="494" id="780"/>
+                        </connections>
+                    </slider>
+                </subviews>
+            </view>
+            <point key="canvasLocation" x="411" y="259"/>
+        </box>
+        <box autoresizesSubviews="NO" borderType="line" title="Border" id="647">
+            <rect key="frame" x="0.0" y="0.0" width="201" height="42"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <view key="contentView" id="Wyj-pS-gO8">
+                <rect key="frame" x="3" y="3" width="195" height="24"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="650">
+                        <rect key="frame" x="10" y="2" width="180" height="20"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="0.01" maxValue="0.25" doubleValue="0.10000000000000001" tickMarkPosition="above" sliderType="linear" id="651"/>
+                        <connections>
+                            <action selector="setAmbilightValues:" target="494" id="779"/>
+                        </connections>
+                    </slider>
+                </subviews>
+            </view>
+        </box>
+    </objects>
+</document>
